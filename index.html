@@ -215,9 +215,64 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Simple JS carousel using images/ folder -->
+                <script>
+                  // All hero images live in /images relative to this HTML file
+                  const basePath = "./images/";
+
+                  const heroImages = [
+                    "2man1.jpeg",
+                    "2manroom.jpeg",
+                    "4man.jpeg",
+                    "4man1.jpeg",
+                    "6man.jpeg",
+                    "bathroom.jpeg",
+                    "bathroom1.jpeg",
+                    "bathroom2.jpeg",       // if you rename to bathroom2.jpeg, update this string
+                    "bathroom3.jpeg",
+                    "diningroom.jpeg",
+                    "hero.png",
+                    "kitchen.jpeg",
+                    "livingroom.png"
+                  ];
+
+                  (function () {
+                    const carousel = document.getElementById("hero-carousel");
+                    if (!carousel) return;
+
+                    // Inject images as absolutely positioned slides
+                    heroImages.forEach((file, index) => {
+                      const img = document.createElement("img");
+                      img.src = basePath + file;
+                      img.alt = "Sober living home photo " + (index + 1);
+                      img.className =
+                        "absolute inset-0 w-full h-full object-cover transition-opacity duration-700 " +
+                        (index === 0 ? "opacity-100" : "opacity-0");
+                      img.dataset.index = index;
+                      carousel.appendChild(img);
+                    });
+
+                    const slides = carousel.querySelectorAll("img");
+                    if (!slides.length) return;
+
+                    let currentIndex = 0;
+                    const total = slides.length;
+
+                    setInterval(() => {
+                      const current = slides[currentIndex];
+                      currentIndex = (currentIndex + 1) % total;
+                      const next = slides[currentIndex];
+
+                      current.classList.remove("opacity-100");
+                      current.classList.add("opacity-0");
+                      next.classList.remove("opacity-0");
+                      next.classList.add("opacity-100");
+                    }, 4000);
+                  })();
+                </script>
             </div>
-        </div>
-    </header>
+
 
     <!-- Pricing Section -->
     <section id="pricing" class="relative py-24 px-6 overflow-hidden">
