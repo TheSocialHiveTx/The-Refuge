@@ -1,106 +1,151 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "additionalType": [
-    "https://schema.org/LodgingBusiness",
-    "https://schema.org/HealthAndBeautyBusiness"
-  ],
-  "name": "The Refuge Sober Home",
-  "description": "A safe, structured, and supportive sober living environment serving men in Deer Park, TX and Harris County. Features 24/7 accountability, premium amenities, and brotherhood.",
-  "image": "https://therefugesoberliving.com/images/logo.jpeg",
-  "@id": "https://therefugesoberliving.com/#entity",
-  "url": "https://therefugesoberliving.com",
-  "telephone": "281-309-6718",
-  "email": "info@therefugesoberliving.com",
-  "priceRange": "$165 - $190 per week",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Deer Park",
-    "addressRegion": "TX",
-    "postalCode": "77536",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 29.7052,
-    "longitude": -95.1255
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Deer Park" },
-    { "@type": "City", "name": "Pasadena" },
-    { "@type": "City", "name": "La Porte" },
-    { "@type": "City", "name": "Baytown" },
-    { "@type": "City", "name": "Seabrook" },
-    { "@type": "City", "name": "Houston" },
-    { "@type": "AdministrativeArea", "name": "Harris County" }
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.facebook.com/YOUR_PAGE_LINK",
-    "https://www.instagram.com/YOUR_PROFILE_LINK"
-  ],
-  "knowsAbout": [
-    { "@type": "Thing", "name": "Sober living houses" },
-    { "@type": "Thing", "name": "Twelve-step program" },
-    { "@type": "Thing", "name": "Substance abuse recovery" },
-    { "@type": "Thing", "name": "Men's recovery housing" }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Sober Living Room Tiers",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Economy Package",
-        "description": "6 Man Room, Shared Bath, All Utilities Included",
-        "price": "165",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "165",
-          "priceCurrency": "USD",
-          "unitCode": "WK",
-          "billingIncrement": "1"
-        }
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "additionalType": [
+        "https://schema.org/LodgingBusiness",
+        "https://schema.org/HealthAndBeautyBusiness"
+      ],
+      "@id": "https://therefugesoberliving.com/#entity",
+      "name": "The Refuge Sober Home",
+      "description": "A safe, structured, and supportive sober living environment serving men in Deer Park, TX and Harris County. Features 24/7 accountability, premium amenities, and brotherhood.",
+      "url": "https://therefugesoberliving.com",
+      "telephone": "281-309-6718",
+      "email": "info@therefugesoberliving.com",
+      "image": "https://therefugesoberliving.com/images/logo.jpeg",
+      "priceRange": "$165 - $190 per week",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Deer Park",
+        "addressRegion": "TX",
+        "postalCode": "77536",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Offer",
-        "name": "Standard Package",
-        "description": "4 Man Room, Private Bath, More Privacy",
-        "price": "190",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "190",
-          "priceCurrency": "USD",
-          "unitCode": "WK",
-          "billingIncrement": "1"
-        }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7052,
+        "longitude": -95.1255
       },
-      {
-        "@type": "Offer",
-        "name": "Premium Package",
-        "description": "2 Man Room, Private Bath, Desk Workspace",
-        "price": "190",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "190",
-          "priceCurrency": "USD",
-          "unitCode": "WK",
-          "billingIncrement": "1"
-        }
+      "areaServed": [
+        { "@type": "City", "name": "Deer Park" },
+        { "@type": "City", "name": "Pasadena" },
+        { "@type": "City", "name": "La Porte" },
+        { "@type": "City", "name": "Baytown" },
+        { "@type": "City", "name": "Seabrook" },
+        { "@type": "City", "name": "Houston" },
+        { "@type": "AdministrativeArea", "name": "Harris County" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.facebook.com/YOUR_PAGE_LINK",
+        "https://www.instagram.com/YOUR_PROFILE_LINK"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Sober Living Room Tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Economy Package",
+            "description": "6 Man Room, Shared Bath, All Utilities Included",
+            "price": "165",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "165",
+              "priceCurrency": "USD",
+              "unitCode": "WK",
+              "billingIncrement": "1"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Standard Package",
+            "description": "4 Man Room, Private Bath, More Privacy",
+            "price": "190",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "190",
+              "priceCurrency": "USD",
+              "unitCode": "WK",
+              "billingIncrement": "1"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium Package",
+            "description": "2 Man Room, Private Bath, Desk Workspace",
+            "price": "190",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "190",
+              "priceCurrency": "USD",
+              "unitCode": "WK",
+              "billingIncrement": "1"
+            }
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://therefugesoberliving.com/#website",
+      "url": "https://therefugesoberliving.com",
+      "name": "The Refuge Sober Home",
+      "publisher": {
+        "@id": "https://therefugesoberliving.com/#entity"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://therefugesoberliving.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you require drug testing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. To ensure the safety and sobriety of our brotherhood, we conduct regular and random drug/alcohol screening. This is a core part of our accountability structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a curfew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We maintain a structured curfew to help residents build healthy routines and ensure the house remains quiet and respectful at night. Specific hours are discussed during intake."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the weekly rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our rates (starting at $165/week) are all-inclusive. This covers all utilities, high-speed Wi-Fi, access to the gym equipment, coffee bar, laundry facilities, and premium bedding. There are no hidden fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is eligible to join?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We welcome men who have completed a detox or treatment program (30+ days recommended) and are fully committed to a life of sobriety. You must be willing to participate in our community and adhere to house standards."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
