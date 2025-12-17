@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,207 +53,268 @@
         }
     </style>
 
-    <script type="application/ld+json">
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebSite",
+      "@id": "https://therefugesoberliving.com/#website",
+      "url": "https://therefugesoberliving.com/",
+      "name": "The Refuge Sober Home | Deer Park, TX",
+      "publisher": { "@id": "https://therefugesoberliving.com/#entity" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://therefugesoberliving.com/#webpage",
+      "url": "https://therefugesoberliving.com/",
+      "name": "The Refuge Sober Home | Deer Park, TX",
+      "description": "Men's sober living in Deer Park, TX. A structured, supportive environment for recovery. Starting at $165/week.",
+      "isPartOf": { "@id": "https://therefugesoberliving.com/#website" },
+      "about": { "@id": "https://therefugesoberliving.com/#entity" },
+      "primaryImageOfPage": { "@id": "https://therefugesoberliving.com/#hero-image-livingroom" }
+    },
+
+    {
+      "@type": "ImageObject",
+      "@id": "https://therefugesoberliving.com/#logo",
+      "url": "https://therefugesoberliving.com/images/logo.jpeg",
+      "caption": "The Refuge Sober Home logo"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://therefugesoberliving.com/#hero-image-livingroom",
+      "url": "https://therefugesoberliving.com/images/livingroom.jpg",
+      "caption": "Living room at The Refuge Sober Home"
+    },
+
+    {
+      "@type": "ImageGallery",
+      "@id": "https://therefugesoberliving.com/#hero-gallery",
+      "name": "The Refuge Sober Home Interior Gallery",
+      "associatedMedia": [
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/2man.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/2man2.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/4man.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/6man.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/6man2.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/bathroom1.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/bathroom2.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/bathroom3.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/bathroom4.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/dining.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/kitchen.jpg" },
+        { "@type": "ImageObject", "url": "https://therefugesoberliving.com/images/livingroom.jpg" }
+      ]
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://therefugesoberliving.com/#entity",
+      "name": "The Refuge Sober Home",
+      "alternateName": [
+        "The Refuge Sober Living",
+        "The Refuge Sober Living Home"
+      ],
+      "url": "https://therefugesoberliving.com/",
+      "logo": { "@id": "https://therefugesoberliving.com/#logo" },
+      "image": [
+        { "@id": "https://therefugesoberliving.com/#hero-image-livingroom" }
+      ],
+      "telephone": "+1-281-309-6718",
+      "email": "info@therefugesoberliving.com",
+      "description": "Men's sober living in Deer Park, Texas. The Refuge provides a structured, supportive environment designed to help you build a fresh, new start. For privacy and resident safety, the exact address is not publicly listed.",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585402283542"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Deer Park", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } },
+        { "@type": "City", "name": "Pasadena", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } },
+        { "@type": "City", "name": "La Porte", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } },
+        { "@type": "City", "name": "Baytown", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } }
+      ],
+      "contactPoint": [
         {
-          "@type": "LocalBusiness",
-          "additionalType": [
-            "https://schema.org/LodgingBusiness",
-            "https://schema.org/HealthAndBeautyBusiness"
-          ],
-          "@id": "https://therefugesoberliving.com/#entity",
-          "name": "The Refuge Sober Home",
-          "description": "A safe, structured, and supportive sober living environment serving men in Deer Park, TX and Harris County. Features 24/7 accountability, premium amenities, and brotherhood.",
-          "url": "https://therefugesoberliving.com",
-          "telephone": "281-309-6718",
+          "@type": "ContactPoint",
+          "contactType": "Admissions",
+          "telephone": "+1-281-309-6718",
           "email": "info@therefugesoberliving.com",
-          "image": "https://therefugesoberliving.com/images/logo.jpeg",
-          "priceRange": "$165 - $190 per week",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Deer Park",
-            "addressRegion": "TX",
-            "postalCode": "77536",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 29.7052,
-            "longitude": -95.1255
-          },
+          "availableLanguage": "en",
           "areaServed": [
-            { "@type": "City", "name": "Deer Park" },
-            { "@type": "City", "name": "Pasadena" },
-            { "@type": "City", "name": "La Porte" },
-            { "@type": "City", "name": "Baytown" },
-            { "@type": "City", "name": "Seabrook" },
-            { "@type": "City", "name": "Houston" },
-            { "@type": "AdministrativeArea", "name": "Harris County" }
-          ],
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-            ],
-            "opens": "00:00",
-            "closes": "23:59"
-          },
-          "sameAs": [
-            "https://www.facebook.com/YOUR_PAGE_LINK",
-            "https://www.instagram.com/YOUR_PROFILE_LINK"
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Michael R." },
-              "datePublished": "2024-01-15",
-              "reviewBody": "The structure here saved my life. I found a brotherhood that actually understands what I'm going through. It's not just a place to sleep, it's a place to heal.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "James T." },
-              "datePublished": "2023-11-20",
-              "reviewBody": "I've been to three other sober homes, and The Refuge is by far the cleanest and most supportive. The management really cares about your success.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "David L." },
-              "datePublished": "2024-02-01",
-              "reviewBody": "The location is perfect—close to meetings and work. Being around guys who are serious about their recovery pushed me to be better every single day.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-            }
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Sober Living Room Tiers",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "name": "Economy Package",
-                "description": "6 Man Room, Shared Bath, All Utilities Included",
-                "price": "165",
-                "priceCurrency": "USD",
-                "priceSpecification": {
-                  "@type": "UnitPriceSpecification",
-                  "price": "165",
-                  "priceCurrency": "USD",
-                  "unitCode": "WK",
-                  "billingIncrement": "1"
-                }
-              },
-              {
-                "@type": "Offer",
-                "name": "Standard Package",
-                "description": "4 Man Room, Private Bath, More Privacy",
-                "price": "190",
-                "priceCurrency": "USD",
-                "priceSpecification": {
-                  "@type": "UnitPriceSpecification",
-                  "price": "190",
-                  "priceCurrency": "USD",
-                  "unitCode": "WK",
-                  "billingIncrement": "1"
-                }
-              },
-              {
-                "@type": "Offer",
-                "name": "Premium Package",
-                "description": "2 Man Room, Private Bath, Desk Workspace",
-                "price": "190",
-                "priceCurrency": "USD",
-                "priceSpecification": {
-                  "@type": "UnitPriceSpecification",
-                  "price": "190",
-                  "priceCurrency": "USD",
-                  "unitCode": "WK",
-                  "billingIncrement": "1"
-                }
-              }
-            ]
+            "Deer Park, TX",
+            "Pasadena, TX",
+            "La Porte, TX",
+            "Baytown, TX"
+          ]
+        }
+      ],
+      "knowsAbout": [
+        "Men's sober living",
+        "Sober living home",
+        "Transitional recovery housing",
+        "12-step based living environment",
+        "Accountability in recovery",
+        "Drug and alcohol screening",
+        "Peer support in recovery"
+      ],
+      "potentialAction": [
+        {
+          "@type": "CommunicateAction",
+          "name": "Call Admissions",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "tel:+12813096718",
+            "inLanguage": "en"
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://therefugesoberliving.com/#service",
-          "name": "Men's Sober Living Recovery Program",
-          "serviceType": "Residential Recovery Housing",
-          "provider": { "@id": "https://therefugesoberliving.com/#entity" },
-          "areaServed": { "@id": "https://therefugesoberliving.com/#entity" },
-          "description": "A structured 12-step based living environment offering peer support, accountability, and community reintegration."
+          "@type": "CommunicateAction",
+          "name": "Email Admissions",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "mailto:info@therefugesoberliving.com",
+            "inLanguage": "en"
+          }
+        }
+      ],
+      "mainEntityOfPage": { "@id": "https://therefugesoberliving.com/#webpage" }
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://therefugesoberliving.com/#service-sober-living",
+      "name": "Men's Sober Living Recovery Program",
+      "serviceType": "Residential Recovery Housing",
+      "provider": { "@id": "https://therefugesoberliving.com/#entity" },
+      "areaServed": [
+        { "@type": "City", "name": "Deer Park", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } },
+        { "@type": "City", "name": "Pasadena", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } },
+        { "@type": "City", "name": "La Porte", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } },
+        { "@type": "City", "name": "Baytown", "containedInPlace": { "@type": "AdministrativeArea", "name": "Texas" } }
+      ],
+      "description": "A structured 12-step based living environment offering peer support, accountability, and community reintegration.",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://therefugesoberliving.com/",
+        "availableLanguage": "en"
+      }
+    },
+
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://therefugesoberliving.com/#offer-catalog",
+      "name": "Transparent Weekly Rates",
+      "provider": { "@id": "https://therefugesoberliving.com/#entity" },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "@id": "https://therefugesoberliving.com/#offer-economy",
+          "name": "Economy",
+          "description": "6 Man Room, Shared Bath, Premium Bedding, All Utilities, High Speed Wi-Fi, Coffee Bar Access",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "165",
+            "priceCurrency": "USD",
+            "unitCode": "WK",
+            "billingIncrement": "1"
+          },
+          "availability": "https://schema.org/InStock",
+          "itemOffered": { "@id": "https://therefugesoberliving.com/#service-sober-living" },
+          "url": "https://therefugesoberliving.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://therefugesoberliving.com/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://therefugesoberliving.com/"
-            }
-          ]
+          "@type": "Offer",
+          "@id": "https://therefugesoberliving.com/#offer-standard",
+          "name": "Standard",
+          "description": "4 Man Room, More Privacy, Private Bath, Premium Bedding, All Utilities, High Speed Wi-Fi, Coffee Bar Access",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "190",
+            "priceCurrency": "USD",
+            "unitCode": "WK",
+            "billingIncrement": "1"
+          },
+          "availability": "https://schema.org/InStock",
+          "itemOffered": { "@id": "https://therefugesoberliving.com/#service-sober-living" },
+          "url": "https://therefugesoberliving.com/"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://therefugesoberliving.com/#website",
-          "url": "https://therefugesoberliving.com",
-          "name": "The Refuge Sober Home",
-          "publisher": {
-            "@id": "https://therefugesoberliving.com/#entity"
+          "@type": "Offer",
+          "@id": "https://therefugesoberliving.com/#offer-premium",
+          "name": "Premium",
+          "description": "2 Man Room, More Privacy, Private Bath, Premium Bedding, All Utilities, High Speed Wi-Fi, Coffee Bar Access, Desk Workspace",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "190",
+            "priceCurrency": "USD",
+            "unitCode": "WK",
+            "billingIncrement": "1"
+          },
+          "availability": "https://schema.org/InStock",
+          "itemOffered": { "@id": "https://therefugesoberliving.com/#service-sober-living" },
+          "url": "https://therefugesoberliving.com/"
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://therefugesoberliving.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://therefugesoberliving.com/"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://therefugesoberliving.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you require drug testing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. To ensure the safety and sobriety of our brotherhood, we conduct regular and random drug/alcohol screening. This is a core part of our accountability structure."
           }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://therefugesoberliving.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Do you require drug testing?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. To ensure the safety and sobriety of our brotherhood, we conduct regular and random drug/alcohol screening. This is a core part of our accountability structure."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is there a curfew?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We maintain a structured curfew to help residents build healthy routines and ensure the house remains quiet and respectful at night. Specific hours are discussed during intake."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is included in the weekly rate?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our rates (starting at $165/week) are all-inclusive. This covers all utilities, high-speed Wi-Fi, access to the gym equipment, coffee bar, laundry facilities, and premium bedding. There are no hidden fees."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who is eligible to join?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We welcome men who have completed a detox or treatment program (30+ days recommended) and are fully committed to a life of sobriety. You must be willing to participate in our community and adhere to house standards."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Is there a curfew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We maintain a structured curfew to help residents build healthy routines and ensure the house remains quiet and respectful at night. Specific hours are discussed during intake."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the weekly rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our rates (starting at $165/week) are all-inclusive. This covers all utilities, high-speed Wi-Fi, access to the gym equipment, coffee bar, laundry facilities, and premium bedding. There are no hidden fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is eligible to join?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We welcome men who have completed a detox or treatment program (30+ days recommended) and are fully committed to a life of sobriety. You must be willing to participate in our community and adhere to house standards."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
+
 </head>
 <body class="bg-[#F8FAFC] overflow-x-hidden antialiased selection-theme font-sans">
 
@@ -682,6 +744,7 @@
             <div class="col-span-1 md:col-span-1">
                 <h4 class="text-white font-bold text-lg mb-4">The Refuge</h4>
                 <p class="text-sm leading-relaxed mb-6">A safe, structured, and supportive environment for men in recovery.</p>
+                <p class="text-sm leading-relaxed mb-6">Serving Deer Park, Pasadena, La Porte, and Baytown, TX.</p>
             </div>
             <nav aria-label="Footer Navigation">
                 <h4 class="text-white font-bold text-lg mb-4">Navigation</h4>
@@ -900,3 +963,4 @@
     </script>
 </body>
 </html>
+```
