@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities & Gallery | The Refuge Sober Home</title>
+    <meta name="description"
+        content="Explore The Refuge Sober Living Home. See our gym, coffee bar, spacious bedrooms, and comfortable living areas designed for recovery.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] overflow-x-hidden antialiased selection-theme font-sans">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 md:py-6 bg-white shadow-sm"
+        role="navigation">
+        <div class="max-w-7xl mx-auto px-6 flex items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html"
+                    class="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center transition-transform hover:scale-105 duration-500 cursor-pointer origin-left">
+                    <img src="images/logo.jpeg" alt="The Refuge Sober Home Logo" width="144" height="144"
+                        class="w-full h-full object-contain" />
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 ml-auto animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="relative group">
+                    <button
+                        class="relative px-3 py-2 text-sm font-bold uppercase tracking-widest text-[#383533] hover:text-[#5a5f36] transition-colors flex items-center gap-1">
+                        Areas Served <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-0.5 bg-[#5a5f36] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-50">
+                        <a href="locations/deer-park-tx/"
+                            class="block px-6 py-3 text-sm font-bold text-gray-600 hover:bg-[#5a5f36]/5 hover:text-[#5a5f36] transition-colors">Deer
+                            Park</a>
+                        <a href="locations/pasadena-tx/"
+                            class="block px-6 py-3 text-sm font-bold text-gray-600 hover:bg-[#5a5f36]/5 hover:text-[#5a5f36] transition-colors">Pasadena</a>
+                        <a href="locations/la-porte-tx/"
+                            class="block px-6 py-3 text-sm font-bold text-gray-600 hover:bg-[#5a5f36]/5 hover:text-[#5a5f36] transition-colors">La
+                            Porte</a>
+                        <a href="locations/baytown-tx/"
+                            class="block px-6 py-3 text-sm font-bold text-gray-600 hover:bg-[#5a5f36]/5 hover:text-[#5a5f36] transition-colors">Baytown</a>
+                        <a href="locations/clear-lake-tx/"
+                            class="block px-6 py-3 text-sm font-bold text-gray-600 hover:bg-[#5a5f36]/5 hover:text-[#5a5f36] transition-colors">Clear
+                            Lake</a>
+                        <a href="locations/league-city-tx/"
+                            class="block px-6 py-3 text-sm font-bold text-gray-600 hover:bg-[#5a5f36]/5 hover:text-[#5a5f36] transition-colors">League
+                            City</a>
+                    </div>
+                </div>
+                <a href="index.html#pricing"
+                    class="relative px-3 py-2 text-sm font-bold uppercase tracking-widest text-[#383533] hover:text-[#5a5f36] transition-colors group">Pricing</a>
+                <a href="amenities.html"
+                    class="relative px-3 py-2 text-sm font-bold uppercase tracking-widest text-[#5a5f36] transition-colors group">
+                    Amenities
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#5a5f36]"></span>
+                </a>
+                <a href="index.html#contact"
+                    class="relative px-3 py-2 text-sm font-bold uppercase tracking-widest text-[#383533] hover:text-[#5a5f36] transition-colors group">Contact</a>
+                <a href="tel:281-309-6718"
+                    class="ml-4 bg-[#5a5f36] text-white px-6 py-2.5 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-[#3d4023] transition-all transform hover:scale-105 shadow-md flex items-center gap-2">
+                    Get in Touch <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+
+            <div class="md:hidden ml-auto flex items-center gap-4">
+                <a href="tel:281-309-6718"
+                    class="bg-[#5a5f36] p-2.5 rounded-full text-white shadow-lg flex items-center justify-center">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                </a>
+                <button id="mobile-menu-btn" class="text-[#383533] hover:text-[#5a5f36] transition-colors">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <header class="relative pt-40 pb-20 bg-[#2C2A28] text-white overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#5a5f36] to-transparent"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight animate-slide-up">
+                    Comfort, Community, & <span class="text-[#5a5f36]">Recovery</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed animate-slide-up"
+                    style="animation-delay: 0.1s;">
+                    A home built for healing. Every detail at The Refuge is designed to provide the structure, safety,
+                    and comfort you need to rebuild your life.
+                </p>
+            </div>
+        </header>
+
+        <!-- Detailed Features Grid -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Living Area -->
+                    <div class="space-y-6 group">
+                        <div class="overflow-hidden rounded-3xl aspect-[4/3] shadow-lg">
+                            <img src="images/livingroom.jpg" alt="Spacious Living Room"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#383533] mb-3 flex items-center gap-3">
+                                <i data-lucide="armchair" class="text-[#5a5f36]"></i> Common Areas
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Our spacious living room features comfortable leather seating and a large flat-screen
+                                TV, perfect for house meetings, relaxing after work, or watching the game with the
+                                brotherhood.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kitchen -->
+                    <div class="space-y-6 group">
+                        <div class="overflow-hidden rounded-3xl aspect-[4/3] shadow-lg">
+                            <img src="images/kitchen.jpg" alt="Modern Kitchen"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#383533] mb-3 flex items-center gap-3">
+                                <i data-lucide="chef-hat" class="text-[#5a5f36]"></i> Chef's Kitchen
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Fully equipped with modern appliances, ample storage, and plenty of counter space.
+                                Residents can cook their own meals and often share Sunday dinners together.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Dining -->
+                    <div class="space-y-6 group">
+                        <div class="overflow-hidden rounded-3xl aspect-[4/3] shadow-lg">
+                            <img src="images/dining.jpg" alt="Dining Area"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#383533] mb-3 flex items-center gap-3">
+                                <i data-lucide="utensils" class="text-[#5a5f36]"></i> Community Dining
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                A dedicated dining space where we not only eat but connect. This is the heart of the
+                                home where morning coffee and evening check-ins happen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities List -->
+        <section class="py-24 bg-[#F8FAFC]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-[#383533] mb-4">Premium Amenities Included</h2>
+                    <div class="w-20 h-1.5 bg-[#5a5f36] mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">On-Site Gym</h3>
+                        <p class="text-sm text-gray-500 mt-2">Free weights & cardio</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="wifi" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">High-Speed WiFi</h3>
+                        <p class="text-sm text-gray-500 mt-2">Reliable for work/study</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="coffee" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Coffee Bar</h3>
+                        <p class="text-sm text-gray-500 mt-2">Stocked daily</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="washing-machine" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Laundry</h3>
+                        <p class="text-sm text-gray-500 mt-2">Free on-site use</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="monitor" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Entertainment</h3>
+                        <p class="text-sm text-gray-500 mt-2">Large TV & Streaming</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="sun" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Outdoor Patio</h3>
+                        <p class="text-sm text-gray-500 mt-2">Relaxing outdoor space</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Grill Station</h3>
+                        <p class="text-sm text-gray-500 mt-2">Weekend BBQ ready</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-[#5a5f36]/30 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-[#5a5f36]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#5a5f36]">
+                            <i data-lucide="bed-double" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Premium Bedding</h3>
+                        <p class="text-sm text-gray-500 mt-2">New mattresses & linens</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bedroom Gallery -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div>
+                        <h2 class="text-3xl font-black text-[#383533] mb-4">Bedroom Configurations</h2>
+                        <p class="text-gray-500 max-w-lg">
+                            We offer different room types to fit your budget and preference. All rooms are fully
+                            furnished and climate controlled.
+                        </p>
+                    </div>
+                    <a href="index.html#pricing"
+                        class="bg-[#5a5f36] text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-[#3d4023] transition-colors flex items-center gap-2">
+                        View Pricing <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-xl">
+                        <img src="images/6man.jpg" alt="6 Man Room"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                            <h3 class="text-white font-bold text-xl mb-1">Economy Options</h3>
+                            <p class="text-gray-300 text-sm">Comfortable 6-man occupancy</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-xl">
+                        <img src="images/4man.jpg" alt="4 Man Room"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                            <h3 class="text-white font-bold text-xl mb-1">Standard Rooms</h3>
+                            <p class="text-gray-300 text-sm">Spacious 4-man occupancy</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-xl">
+                        <img src="images/2man.jpg" alt="2 Man Room"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                            <h3 class="text-white font-bold text-xl mb-1">Premium Rooms</h3>
+                            <p class="text-gray-300 text-sm">Private 2-man occupancy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bathroom Gallery -->
+        <section class="py-24 bg-[#F8FAFC]">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-black text-[#383533] mb-12 text-center">Clean, Modern Bathrooms</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div
+                        class="rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="images/bathroom1.jpg" alt="Bathroom 1" class="w-full h-64 object-cover">
+                    </div>
+                    <div
+                        class="rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="images/bathroom2.jpg" alt="Bathroom 2" class="w-full h-64 object-cover">
+                    </div>
+                    <div
+                        class="rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="images/bathroom3.jpg" alt="Bathroom 3" class="w-full h-64 object-cover">
+                    </div>
+                    <div
+                        class="rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="images/bathroom4.jpg" alt="Bathroom 4" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-32 bg-[#5a5f36] relative overflow-hidden text-center px-6">
+            <div class="absolute inset-0 bg-[#3d4023]/20"></div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-8">Come See It Yourself</h2>
+                <p class="text-xl text-[#e8eadd] mb-12 max-w-2xl mx-auto">
+                    Pictures are great, but the vibe is better. Schedule a tour to meet the house manager and see if The
+                    Refuge is right for you.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="tel:281-309-6718"
+                        class="bg-white text-[#5a5f36] px-12 py-5 rounded-full font-black text-xl hover:bg-[#e8eadd] hover:scale-105 transition-all shadow-xl flex items-center gap-3">
+                        <i data-lucide="phone"></i> 281-309-6718
+                    </a>
+                    <a href="index.html#contact"
+                        class="bg-transparent border-2 border-white text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-[#5a5f36] transition-colors flex items-center gap-3">
+                        Message Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-50 transform translate-y-full transition-transform duration-300 flex flex-col pt-24 px-6 md:hidden overflow-y-auto">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-[#383533] hover:text-[#5a5f36]">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <nav class="flex flex-col gap-6 text-center">
+            <a href="index.html" class="text-2xl font-bold text-[#383533] hover:text-[#5a5f36]"
+                onclick="closeMenu()">Home</a>
+            <a href="index.html#pricing" class="text-2xl font-bold text-[#383533] hover:text-[#5a5f36]"
+                onclick="closeMenu()">Pricing</a>
+            <a href="amenities.html" class="text-2xl font-bold text-[#383533] hover:text-[#5a5f36]"
+                onclick="closeMenu()">Amenities</a>
+            <div class="flex flex-col gap-3 items-center">
+                <span class="text-lg font-bold text-gray-400 uppercase tracking-widest">Areas Served</span>
+                <a href="locations/deer-park-tx/" class="text-lg text-gray-600" onclick="closeMenu()">Deer Park</a>
+                <a href="locations/pasadena-tx/" class="text-lg text-gray-600" onclick="closeMenu()">Pasadena</a>
+                <a href="locations/la-porte-tx/" class="text-lg text-gray-600" onclick="closeMenu()">La Porte</a>
+                <a href="locations/baytown-tx/" class="text-lg text-gray-600" onclick="closeMenu()">Baytown</a>
+                <a href="locations/clear-lake-tx/" class="text-lg text-gray-600" onclick="closeMenu()">Clear
+                    Lake</a>
+                <a href="locations/league-city-tx/" class="text-lg text-gray-600" onclick="closeMenu()">League
+                    City</a>
+            </div>
+            <a href="index.html#contact" class="text-2xl font-bold text-[#383533] hover:text-[#5a5f36]"
+                onclick="closeMenu()">Contact</a>
+            <a href="tel:281-309-6718"
+                class="bg-[#5a5f36] text-white px-8 py-3 rounded-full font-bold text-lg uppercase tracking-wide mx-auto mt-4">
+                Call Now
+            </a>
+        </nav>
+    </div>
+
+    <footer class="bg-[#1a1816] text-gray-500 py-16 px-6 border-t border-gray-800 font-sans">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-1">
+                <h4 class="text-white font-bold text-lg mb-4">The Refuge</h4>
+                <p class="text-sm leading-relaxed mb-6">A safe, structured, and supportive environment for men in
+                    recovery.</p>
+                <p class="text-sm leading-relaxed mb-6">Serving Deer Park, Pasadena, La Porte, and Baytown, TX.</p>
+            </div>
+            <nav aria-label="Footer Navigation">
+                <h4 class="text-white font-bold text-lg mb-4">Navigation</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-[#5a5f36] transition-colors">Home</a></li>
+                    <li><a href="index.html#pricing" class="hover:text-[#5a5f36] transition-colors">Pricing</a></li>
+                    <li><a href="amenities.html" class="hover:text-[#5a5f36] transition-colors text-white">Amenities</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav aria-label="Locations Navigation">
+                <h4 class="text-white font-bold text-lg mb-4">Locations</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="locations/deer-park-tx/" class="hover:text-[#5a5f36] transition-colors">Deer Park</a>
+                    </li>
+                    <li><a href="locations/pasadena-tx/" class="hover:text-[#5a5f36] transition-colors">Pasadena</a>
+                    </li>
+                    <li><a href="locations/la-porte-tx/" class="hover:text-[#5a5f36] transition-colors">La Porte</a>
+                    </li>
+                    <li><a href="locations/baytown-tx/" class="hover:text-[#5a5f36] transition-colors">Baytown</a></li>
+                    <li><a href="locations/clear-lake-tx/" class="hover:text-[#5a5f36] transition-colors">Clear Lake</a>
+                    </li>
+                    <li><a href="locations/league-city-tx/" class="hover:text-[#5a5f36] transition-colors">League
+                            City</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-3.5 h-3.5"
+                            aria-hidden="true"></i> 281-309-6718</li>
+                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5"
+                            aria-hidden="true"></i> Deer Park, TX</li>
+                    <li class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5"
+                            aria-hidden="true"></i> 24/7 Intake</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2025 The Refuge Sober Home. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Simple Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-panel', 'shadow-lg');
+                navbar.classList.remove('md:py-6', 'py-4');
+            } else {
+                navbar.classList.remove('glass-panel', 'shadow-lg');
+                navbar.classList.add('md:py-6', 'py-4');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-y-full');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('translate-y-full');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMenu);
+        }
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', closeMenu);
+        }
+
+        // Close menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+</body>
+
+</html>
