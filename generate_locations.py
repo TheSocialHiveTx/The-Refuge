@@ -127,7 +127,7 @@ template = """<!DOCTYPE html>
               "name": "Do you accept residents from {name}?",
               "acceptedAnswer": {{
                 "@type": "Answer",
-                "text": "Yes, we frequently welcome residents from {name} who are looking for a safe, structured environment just a short distance away."
+                "text": "Yes, we are a popular choice for men from {name} who want to stay local but need a structured living environment."
               }}
             }},
             {{
@@ -376,7 +376,7 @@ template = """<!DOCTYPE html>
                         </span>
                     </summary>
                     <div class="px-6 pb-6 text-gray-600">
-                         Yes! We are a popular choice for men from {name} who want to stay local but need a structured living environment.
+                         Yes, we are a popular choice for men from {name} who want to stay local but need a structured living environment.
                     </div>
                 </details>
 
